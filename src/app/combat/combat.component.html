@@ -1,0 +1,36 @@
+<div id="fenetre" class="row">
+    <div class="pokemon1 col-md-6">
+      <h2>{{ pokemon1.nom }}</h2>
+      <p>Caractéristiques :</p>
+      <ul>
+        <li>
+          Speed : {{ pokemon1.speed }}
+        </li>
+        <li>
+          Life : {{ pokemon1.life }}
+        </li>
+        <li>
+          Attack : {{pokemon1.attackValue}}
+        </li>
+      </ul>
+    </div>
+  
+    <div class="pokemon2 col-md-6">
+      <h2>{{ pokemon2.nom }}</h2>
+      <p>Caractéristiques :</p>
+      <ul>
+        <li>
+          Speed : {{ pokemon2.speed }}
+        </li>
+        <li>
+          Life : {{ pokemon2.life }}
+        </li>
+        <li>
+          Attack : {{pokemon2.attackValue}}
+        </li>
+      </ul>
+    </div>
+
+    <button role="button" (click)="handleController()">{{PlayPause}} PlayPause</button>
+  
+  </div>
