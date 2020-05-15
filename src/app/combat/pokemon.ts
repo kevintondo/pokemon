@@ -26,9 +26,9 @@ export class Pokemon {
   
   export function compareSpeed(pokemon1: Pokemon, pokemon2: Pokemon) {
     if (pokemon1.speed > pokemon2.speed) {
-      return pokemon1.getNom();
+      return pokemon1.nom;
     }  else {
-      return pokemon2.getNom();
+      return pokemon2.nom;
     }
   }
   
@@ -49,7 +49,7 @@ export class Pokemon {
     let secondPokemon;
   
     if (premierTour) {
-      console.log('Le combat commence !');
+      
       premierTour = false;
       if (compareSpeed(a, b) === a.nom) {
         premierPokemon = a;
@@ -63,21 +63,19 @@ export class Pokemon {
     console.log('Nouveau tour !');
   
     while (premierPokemon.life > 0 && secondPokemon.life > 0) {
-      console.log(premierPokemon.nom + ' attack !');
+      //console.log(premierPokemon.nom + ' attack !');
       attack(premierPokemon, secondPokemon);
       if (secondPokemon.life > 0) {
-        console.log(secondPokemon.nom + ' attack !');
+       // console.log(secondPokemon.nom + ' attack !');
         attack(secondPokemon, premierPokemon);
       }
   
     }
   
     if (premierPokemon.life > 0) {
-      console.log(premierPokemon.nom + ' wins !');
-      return premierPokemon.nom;
-    } else {
-      console.log(secondPokemon.nom + ' wins !');
-      return secondPokemon.nom;
+      return(premierPokemon.nom + ' wins !');
+    } else {;
+      return (secondPokemon.nom + ' wins !');
     }
 
 
